@@ -26,8 +26,7 @@ from controller.admin.register_patients import admin_register_patients_controlle
 
 
 
-app = Flask(__name__)
-
+app = Flask(__name__, static_url_path='/static')
 # Patenit controllers
 app.register_blueprint(patient_login_controller)
 app.register_blueprint(patient_phone_controller)
