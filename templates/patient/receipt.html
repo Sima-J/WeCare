@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/static/output.css" rel="stylesheet" />
+
+    <title>Patient Recepit</title>
+  </head>
+  <body>
+    <!-- Circular Avatar Icon -->
+
+    <div class="container mx-auto p-4">
+      <!-- Circular Avatar and Heading on the Same Row (Aligned to the Right) -->
+      <div class="flex items-center justify-end mb-4">
+        <!-- Heading -->
+        <h5 class="font-bold mr-4">
+          Welcome Dear Patient, We wish you fast recovery
+        </h5>
+        <!-- Circular Avatar -->
+        <div class="w-16 h-16 rounded-full overflow-hidden bg-gray-300">
+          <img
+            src="https://placekitten.com/200/200"
+            alt="Avatar"
+            class="object-cover w-full h-full"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Second Row with Form -->
+    <!-- templates/index.html -->
+
+    <!-- Nice Table -->
+    <div
+      class="mx-auto mt-8 flex justify-center mb-4 border border-primary bg-blue_100 p-4 w-3/5"
+    >
+      <table class="w-full text-xl rounded-md overflow-hidden">
+        <tbody>
+          <!-- Sample data, replace with actual data dynamically in your application -->
+          <tr class="py-2">
+            <td class="py-2 px-4 w-2/5 font-semibold text-primary">
+              Patient’s Name
+            </td>
+            <td class="py-2 px-4 w-3/5">John Doe</td>
+          </tr>
+          <tr class="py-2">
+            <td class="py-2 px-4 w-2/5 font-semibold text-primary">
+              Doctor’s Name
+            </td>
+            <td class="py-2 px-4">Dr. Smith</td>
+          </tr>
+          <tr class="py-2">
+            <td class="py-2 px-4 w-2/5 font-semibold text-primary">
+              Doctor’s Specialization
+            </td>
+            <td class="py-2 px-4">Cardiologist</td>
+          </tr>
+          <tr class="py-2">
+            <td class="py-2 px-4 w-2/5 font-semibold text-primary">
+              Doctor’s Room
+            </td>
+            <td class="py-2 px-4">Room 203</td>
+          </tr>
+          <tr class="py-2">
+            <td class="py-2 px-4 w-2/5 font-semibold text-primary">
+              Appointment Time
+            </td>
+            <td class="py-2 px-4">2022-01-01 10:00 AM</td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
