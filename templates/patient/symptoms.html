@@ -7,31 +7,9 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <style>
-      .flex-container {
-        display: flex;
-        background-color: blue;
-      }
+    <link href="/static/output.css" rel="stylesheet" />
 
-      .avatar {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin-right: 8px;
-      }
 
-      .avatar img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-      }
-
-      .cont {
-        width: 180px;
-        height: 180px;
-      }
-    </style>
     <title>Patient Symptoms</title>
   </head>
   <body class="bg-gray-100 font-sans">
@@ -52,17 +30,48 @@
         </div>
       </div>
 
-      <div class="flex">
+      <div
+        class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 justify-center items-center"
+      >
         <!-- Row 1 -->
-        <div class="bg-blue-200 p-4 mr-4">
+        <div class="p-4 mr-4">
+          <div class="mb-2 bg-blue-200 p-3">
+            <div class="mb-2">
+              <img src="/static/img/flu.jpg" alt="image" />
+            </div>
+
+            <div class="flex justify-center items-center gap-5">
+              <!--low-->
+              <div
+                class="p-5  hover:scale-110 transition-all cursor-pointer w-5 h-5 flex border rounded-full bg-green justify-center items-center"
+              >
+                L
+              </div>
+
+              <!--medium-->
+              <div
+                class="p-5 w-5  hover:scale-110 transition-all cursor-pointer h-5 flex border rounded-full bg-yellow justify-center items-center"
+              >
+                M
+              </div>
+
+              <!--high-->
+              <div
+                class="p-5 w-5  hover:scale-110 transition-all cursor-pointer h-5 flex border rounded-full bg-red justify-center items-center"
+              >
+                H
+              </div>
+            </div>
+          </div>
+
           <div class="mb-2 bg-yellow-200 p-2 cont">
             <div class="mb-2">
               <img
-                src="https://via.placeholder.com/100x50/FF0000/FFFFFF?text=Cough"
+                src="https://via.placeholder.com/100x50/00FF00/000000?text=L"
                 alt=""
               />
             </div>
-            <div class="flex-container">
+            <div class="flex justify-center items-center gap-5">
               <div class="avatar">
                 <img
                   src="https://via.placeholder.com/50/00FF00/000000?text=L"
@@ -90,35 +99,7 @@
                 alt=""
               />
             </div>
-            <div class="flex-container">
-              <div class="avatar">
-                <img
-                  src="https://via.placeholder.com/50/00FF00/000000?text=L"
-                  alt="Avatar L"
-                />
-              </div>
-              <div class="avatar">
-                <img
-                  src="https://via.placeholder.com/50/FFA500/000000?text=M"
-                  alt="Avatar M"
-                />
-              </div>
-              <div class="avatar">
-                <img
-                  src="https://via.placeholder.com/50/FF0000/FFFFFF?text=H"
-                  alt="Avatar H"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="mb-2 bg-yellow-200 p-2 cont">
-            <div class="mb-2">
-              <img
-                src="https://via.placeholder.com/100x50/00FF00/000000?text=L"
-                alt=""
-              />
-            </div>
-            <div class="flex-container">
+            <div class="flex justify-center items-center gap-5">
               <div class="avatar">
                 <img
                   src="https://via.placeholder.com/50/00FF00/000000?text=L"
@@ -145,12 +126,9 @@
         <div class="bg-blue-200 p-4 mr-4">
           <div class="mb-2 bg-yellow-200 p-2 cont">
             <div class="mb-2">
-              <img
-                src="https://via.placeholder.com/100x50/FF0000/FFFFFF?text=Cough"
-                alt=""
-              />
+              <img src="/static/img/dizzy.jpg" alt="" />
             </div>
-            <div class="flex-container">
+            <div class="flex justify-center items-center gap-5">
               <div class="avatar">
                 <img
                   src="https://via.placeholder.com/50/00FF00/000000?text=L"
@@ -178,7 +156,7 @@
                 alt=""
               />
             </div>
-            <div class="flex-container">
+            <div class="flex justify-center items-center gap-5">
               <div class="avatar">
                 <img
                   src="https://via.placeholder.com/50/00FF00/000000?text=L"
@@ -206,7 +184,7 @@
                 alt=""
               />
             </div>
-            <div class="flex-container">
+            <div class="flex justify-center items-center gap-5">
               <div class="avatar">
                 <img
                   src="https://via.placeholder.com/50/00FF00/000000?text=L"
@@ -233,12 +211,97 @@
         <div class="bg-blue-200 p-4 mr-4">
           <div class="mb-2 bg-yellow-200 p-2 cont">
             <div class="mb-2">
+              <img src="/static/img/fever.jpg" alt="" />
+            </div>
+            <div class="flex justify-center items-center gap-5">
+              <div class="avatar">
+                <img
+                  src="https://via.placeholder.com/50/00FF00/000000?text=L"
+                  alt="Avatar L"
+                />
+              </div>
+              <div class="avatar">
+                <img
+                  src="https://via.placeholder.com/50/FFA500/000000?text=M"
+                  alt="Avatar M"
+                />
+              </div>
+              <div class="avatar">
+                <img
+                  src="https://via.placeholder.com/50/FF0000/FFFFFF?text=H"
+                  alt="Avatar H"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="mb-2 bg-yellow-200 p-2 cont">
+            <div class="mb-2">
+              <img
+                src="https://via.placeholder.com/100x50/00FF00/000000?text=L"
+                alt=""
+              />
+            </div>
+            <div class="flex justify-center items-center gap-5">
+              <div class="avatar">
+                <img
+                  src="https://via.placeholder.com/50/00FF00/000000?text=L"
+                  alt="Avatar L"
+                />
+              </div>
+              <div class="avatar">
+                <img
+                  src="https://via.placeholder.com/50/FFA500/000000?text=M"
+                  alt="Avatar M"
+                />
+              </div>
+              <div class="avatar">
+                <img
+                  src="https://via.placeholder.com/50/FF0000/FFFFFF?text=H"
+                  alt="Avatar H"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="mb-2 bg-yellow-200 p-2 cont">
+            <div class="mb-2">
+              <img
+                src="https://via.placeholder.com/100x50/00FF00/000000?text=L"
+                alt=""
+              />
+            </div>
+            <div class="flex justify-center items-center gap-5">
+              <div class="avatar">
+                <img
+                  src="https://via.placeholder.com/50/00FF00/000000?text=L"
+                  alt="Avatar L"
+                />
+              </div>
+              <div class="avatar">
+                <img
+                  src="https://via.placeholder.com/50/FFA500/000000?text=M"
+                  alt="Avatar M"
+                />
+              </div>
+              <div class="avatar">
+                <img
+                  src="https://via.placeholder.com/50/FF0000/FFFFFF?text=H"
+                  alt="Avatar H"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="bg-blue-200 p-4 mr-4">
+          <div class="mb-2 bg-yellow-200 p-2 cont">
+            <div class="mb-2">
               <img
                 src="https://via.placeholder.com/100x50/FF0000/FFFFFF?text=Cough"
                 alt=""
               />
             </div>
-            <div class="flex-container">
+            <div class="flex justify-center items-center gap-5">
               <div class="avatar">
                 <img
                   src="https://via.placeholder.com/50/00FF00/000000?text=L"
@@ -266,7 +329,7 @@
                 alt=""
               />
             </div>
-            <div class="flex-container">
+            <div class="flex justify-center items-center gap-5">
               <div class="avatar">
                 <img
                   src="https://via.placeholder.com/50/00FF00/000000?text=L"
@@ -294,7 +357,7 @@
                 alt=""
               />
             </div>
-            <div class="flex-container">
+            <div class="flex justify-center items-center gap-5">
               <div class="avatar">
                 <img
                   src="https://via.placeholder.com/50/00FF00/000000?text=L"
