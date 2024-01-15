@@ -1,11 +1,160 @@
+<!-- templates/index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link href="/static/output.css" rel="stylesheet" />
+    <!-- Add other head elements as needed -->
   </head>
   <body>
-    <p>patient record</p>
+    <!-- Filter and Table -->
+    <div class="container mx-auto p-4">
+      <!-- Circular Avatar and Heading on the Same Row (Aligned to the Right) -->
+      <div class="flex items-center justify-end mb-4">
+        <!-- Heading -->
+        <h5 class="font-bold mr-4">
+          Welcome Dear Patient, We wish you fast recovery
+        </h5>
+        <!-- Circular Avatar -->
+        <div class="w-16 h-16 rounded-full overflow-hidden bg-gray-300">
+          <img
+            src="https://placekitten.com/200/200"
+            alt="Avatar"
+            class="object-cover w-full h-full"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto mt-8">
+      <!-- Date Filter and Button -->
+      <div class="flex flex-col md:flex-row items-center justify-center mb-6">
+        <label
+          for="date_filter"
+          class="block text-lg font-semibold text-black mb-2 md:mb-0 md:mr-2"
+          >Filter by Date:</label
+        >
+        <input
+          type="date"
+          id="date_filter"
+          name="date_filter"
+          class="p-2 border rounded-md mx-2"
+        />
+        <button class="bg-primary text-white px-4 py-2 rounded-md">
+          Filter
+        </button>
+      </div>
+
+      <!-- Simple Table -->
+      <div class="overflow-x-auto text-center mx-2">
+        <table
+          class="min-w-full bg-blue_100 border border-primary overflow-hidden"
+        >
+          <thead class="bg-primary text-white">
+            <tr>
+              <th
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                No.
+              </th>
+              <th
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                Date
+              </th>
+              <th
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                Time
+              </th>
+              <th
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                Patient's Name
+              </th>
+              <th
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                Doctor Name
+              </th>
+              <th
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                Diagnostics
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Sample data, replace with actual data dynamically in your application -->
+            <tr>
+              <td
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                1
+              </td>
+              <td
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                2022-01-01
+              </td>
+              <td
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                10:00 AM
+              </td>
+              <td
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                John Doe
+              </td>
+              <td
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                Dr. Smith
+              </td>
+              <td
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                Blood Test
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                2
+              </td>
+              <td
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                2022-01-02
+              </td>
+              <td
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                02:30 PM
+              </td>
+              <td
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                Jane Doe
+              </td>
+              <td
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                Dr. Johnson
+              </td>
+              <td
+                class="py-2 px-1 md:px-2 border-primary border-b text-xs md:text-sm lg:text-base"
+              >
+                X-ray
+              </td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+      </div>
+    </div>
   </body>
 </html>
