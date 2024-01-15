@@ -24,30 +24,27 @@
     </div>
 
     <div class="w-full flex justify-center items-center">
-    <div class="bg-blue-200 lg:w-[50%] h-full  w-full p-10 rounded-md">
-      <div class="flex flex-col gap-10 h-full items-center">
-        <div class="w-full flex justify-center">
-        <label
-          for="patient_covid"
-          class=" text-xl font-semibold text-center text-black"
-          >SELECT THE AVAILABLE DOCTORS FOR TODAY</label
-        >
+      <div class="bg-blue-200 lg:w-[50%] h-full w-full p-10 rounded-md">
+        <div class="flex flex-col gap-10 h-full items-center">
+          <div class="w-full flex justify-center">
+            <label
+              for="patient_covid"
+              class="text-xl font-semibold text-center text-black"
+              >SELECT THE AVAILABLE DOCTORS FOR TODAY</label
+            >
+          </div>
+          <div>
+            <input type="checkbox" id="sara" name="doctor[]" value="sara" />
+            <label for="sara">Dr. Sara Zuhair Khudher</label><br />
+
+            <input type="checkbox" id="sima" name="doctor[]" value="sima" />
+            <label for="sima">Dr. Sima Jazaa</label><br />
+
+            <input type="checkbox" id="diako" name="doctor[]" value="diako" />
+            <label for="diako">Dr. Diako Kaso</label><br />
+          </div>
         </div>
-        <div class="w-full mt-10">
-        <select
-          id="patient_covid"
-          name="patient_covid"
-          class="p-2 border rounded-md w-full bg-white"
-        >
-        <option value="">Doctors</option>          
-        <option value="sara">Dr.Sara Zuhair Khudher</option>
-          <option value="sima">Dr.Sima Jazaa</option>
-          <option value="diako">Dr.Diako Kaso</option>
-        </select>
-      </div>
       </div>
     </div>
-  </div>
-
   </body>
 </html>
