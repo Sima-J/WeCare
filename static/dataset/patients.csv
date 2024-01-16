@@ -1,11 +1,161 @@
-PatientName,Gender,Symptom1,Level1,Symptom2,Level2,Symptom3,Level3,Illness
-John Doe,Male,Fever,High,Cough,Medium,Headache,Low,Flu
-Jane Smith,Female,Cough,High,Fatigue,Medium,Nausea,Low,Cold
-Bob Johnson,Male,Headache,High,Joint pain,Medium,Dizziness,Low,Migraine
-Alice Williams,Female,Shortness of breath,High,Fever,Medium,Rash,Low,Asthma
-Chris Brown,Male,Joint pain,High,Fatigue,Medium,Cough,Low,Arthritis
-Eva Davis,Female,Fatigue,High,Headache,Medium,Shortness of breath,Low,Anemia
-Mike Miller,Male,Nausea,High,Stomach ache,Medium,Headache,Low,Food poisoning
-Olivia Wilson,Female,Rash,High,Itching,Medium,Shortness of breath,Low,Allergy
-Daniel Taylor,Male,Stomach ache,High,Nausea,Medium,Fever,Low,Indigestion
-Sophia Rodriguez,Female,Dizziness,High,Vertigo,Medium,Fatigue,Low,Vertigo
+RecordID,PatientID,PatientName,Gender,Age,Symptom1,Level1,Symptom2,Level2,Symptom3,Level3,Symptom4,Level4,Doctor,Date,Time,SpecializedDoctor,Illness
+1,1,John Doe,Male,30,Fever,High,Cough,Medium,Headache,Low,Shortness of breath,Medium,Dr. Smith,2022-01-01,10:00 AM,Internal Medicine,Flu
+2,2,Jane Smith,Female,45,Cough,High,Fatigue,Medium,Nausea,Low,,Dr. Johnson,2022-01-02,02:30 PM,Family Medicine,Cold
+3,3,Bob Johnson,Male,50,Headache,High,Joint pain,Medium,Dizziness,Low,,Dr. Smith,2022-01-03,11:15 AM,Neurology,Migraine
+4,4,Alice Williams,Female,35,Shortness of breath,High,Fever,Medium,Rash,Low,Dizziness,Medium,Dr. Davis,2022-01-01,03:45 PM,Pulmonology,Asthma
+5,5,Chris Brown,Male,40,Joint pain,High,Fatigue,Medium,Cough,Low,,Dr. Johnson,2022-01-02,09:30 AM,Rheumatology,Arthritis
+6,6,Eva Davis,Female,28,Fatigue,High,Headache,Medium,Shortness of breath,Low,,Dr. Smith,2022-01-03,01:00 PM,Hematology,Anemia
+7,7,Mike Miller,Male,60,Nausea,High,Stomach ache,Medium,Headache,Low,,Dr. Davis,2022-01-01,10:30 AM,Gastroenterology,Food poisoning
+8,8,Olivia Wilson,Female,22,Rash,High,Itching,Medium,Shortness of breath,Low,,Dr. Johnson,2022-01-02,04:20 PM,Allergy and Immunology,Allergy
+9,9,Daniel Taylor,Male,48,Stomach ache,High,Nausea,Medium,Fever,Low,Headache,Medium,Dr. Smith,2022-01-03,02:45 PM,Gastroenterology,Indigestion
+10,10,Sophia Rodriguez,Female,32,Dizziness,High,Vertigo,Medium,Fatigue,Low,Shortness of breath,Medium,Dr. Davis,2022-01-01,11:45 AM,Neurology,Vertigo
+11,1,John Doe,Male,30,Fever,High,Cough,Medium,Headache,Low,Shortness of breath,Medium,Dr. Smith,2024-01-01,09:30 AM,Internal Medicine,Flu
+12,2,Jane Smith,Female,45,Cough,High,Fatigue,Medium,Nausea,Low,,Dr. Johnson,2024-01-02,01:45 PM,Family Medicine,Cold
+13,3,Bob Johnson,Male,50,Headache,High,Joint pain,Medium,Dizziness,Low,,Dr. Smith,2024-01-03,10:00 AM,Neurology,Migraine
+14,4,Alice Williams,Female,35,Shortness of breath,High,Fever,Medium,Rash,Low,Dizziness,Medium,Dr. Davis,2024-01-01,02:15 PM,Pulmonology,Asthma
+15,5,Chris Brown,Male,40,Joint pain,High,Fatigue,Medium,Cough,Low,,Dr. Johnson,2024-01-02,08:45 AM,Rheumatology,Arthritis
+16,6,Eva Davis,Female,28,Fatigue,High,Headache,Medium,Shortness of breath,Low,,Dr. Smith,2024-01-03,12:30 PM,Hematology,Anemia
+17,7,Mike Miller,Male,60,Nausea,High,Stomach ache,Medium,Headache,Low,,Dr. Davis,2024-01-01,11:00 AM,Gastroenterology,Food poisoning
+18,8,Olivia Wilson,Female,22,Rash,High,Itching,Medium,Shortness of breath,Low,,Dr. Johnson,2024-01-02,03:15 PM,Allergy and Immunology,Allergy
+19,9,Daniel Taylor,Male,48,Stomach ache,High,Nausea,Medium,Fever,Low,Headache,Medium,Dr. Smith,2024-01-03,02:00 PM,Gastroenterology,Indigestion
+20,10,Sophia Rodriguez,Female,32,Dizziness,High,Vertigo,Medium,Fatigue,Low,Shortness of breath,Medium,Dr. Davis,2024-01-01,10:45 AM,Neurology,Vertigo
+21,1,John Doe,Male,30,Fever,High,Shortness of breath,Medium,,Dr. Smith,2024-02-15,02:30 PM,Pulmonology,Pneumonia
+22,2,Jane Smith,Female,45,Headache,High,Joint pain,Medium,Dizziness,Low,,Dr. Johnson,2024-02-16,10:00 AM,Rheumatology,Migraine
+23,3,Bob Johnson,Male,50,Stomach ache,High,Nausea,Medium,Fever,Low,Headache,Medium,Dr. Davis,2024-02-17,03:45 PM,Gastroenterology,Food poisoning
+24,4,Alice Williams,Female,35,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Smith,2024-02-18,09:15 AM,Internal Medicine,Asthma
+25,5,Chris Brown,Male,40,Joint pain,High,Fatigue,Medium,Nausea,Low,,Dr. Johnson,2024-02-19,12:30 PM,Neurology,Arthritis
+26,6,Eva Davis,Female,28,Headache,High,Dizziness,Medium,Fatigue,Low,,Dr. Davis,2024-02-20,11:00 AM,Neurology,Migraine
+27,7,Mike Miller,Male,60,Nausea,High,Stomach ache,Medium,Headache,Low,,Dr. Smith,2024-02-21,01:45 PM,Gastroenterology,Indigestion
+28,8,Olivia Wilson,Female,22,Rash,High,Itching,Medium,Shortness of breath,Low,,Dr. Johnson,2024-02-22,03:30 PM,Dermatology,Allergy
+29,9,Daniel Taylor,Male,48,Shortness of breath,High,Fever,Medium,Rash,Low,Dizziness,Medium,Dr. Davis,2024-02-23,09:30 AM,Pulmonology,Asthma
+30,10,Sophia Rodriguez,Female,32,Dizziness,High,Vertigo,Medium,Fatigue,Low,Shortness of breath,Medium,Dr. Smith,2024-02-24,02:00 PM,Neurology,Vertigo
+31,1,John Doe,Male,30,Cough,High,Fatigue,Medium,Nausea,Low,,Dr. Johnson,2024-03-01,10:15 AM,Internal Medicine,Cold
+32,2,Jane Smith,Female,45,Fever,High,Shortness of breath,Medium,Cough,Low,,Dr. Davis,2024-03-02,01:30 PM,Pulmonology,Flu
+33,3,Bob Johnson,Male,50,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Smith,2024-03-03,04:45 PM,Rheumatology,Arthritis
+34,4,Alice Williams,Female,35,Dizziness,High,Headache,Medium,Shortness of breath,Low,,Dr. Johnson,2024-03-04,11:00 AM,Neurology,Vertigo
+35,5,Chris Brown,Male,40,Nausea,High,Stomach ache,Medium,Fatigue,Low,,Dr. Davis,2024-03-05,03:15 PM,Gastroenterology,Food poisoning
+36,6,Eva Davis,Female,28,Fever,High,Cough,Medium,Shortness of breath,Low,,Dr. Smith,2024-03-06,09:30 AM,Pulmonology,Pneumonia
+37,7,Mike Miller,Male,60,Headache,High,Joint pain,Medium,Dizziness,Low,,Dr. Johnson,2024-03-07,12:45 PM,Rheumatology,Migraine
+38,8,Olivia Wilson,Female,22,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Davis,2024-03-08,02:00 PM,Internal Medicine,Asthma
+39,9,Daniel Taylor,Male,48,Dizziness,High,Vertigo,Medium,Headache,Low,,Dr. Smith,2024-03-09,05:15 PM,Neurology,Vertigo
+40,10,Sophia Rodriguez,Female,32,Stomach ache,High,Nausea,Medium,Fever,Low,Headache,Medium,Dr. Johnson,2024-03-10,08:30 AM,Gastroenterology,Indigestion
+41,11,Emily White,Female,28,Headache,High,Fever,Medium,Cough,Low,,Dr. Smith,2024-03-11,02:45 PM,Internal Medicine,Flu
+42,12,Michael Davis,Male,45,Cough,High,Fatigue,Medium,Shortness of breath,Low,,Dr. Johnson,2024-03-12,11:00 AM,Pulmonology,Pneumonia
+43,13,Abigail Wilson,Female,35,Joint pain,High,Dizziness,Medium,Fatigue,Low,,Dr. Davis,2024-03-13,03:15 PM,Rheumatology,Arthritis
+44,14,William Rodriguez,Male,50,Dizziness,High,Fever,Medium,Nausea,Low,,Dr. Smith,2024-03-14,09:30 AM,Internal Medicine,Vertigo
+45,15,Emma Brown,Female,30,Fever,High,Shortness of breath,Medium,Cough,Low,,Dr. Johnson,2024-03-15,01:45 PM,Pulmonology,Pneumonia
+46,16,Nathan Taylor,Male,42,Cough,High,Fatigue,Medium,Headache,Low,,Dr. Davis,2024-03-16,04:00 PM,Internal Medicine,Flu
+47,17,Ava Rodriguez,Female,25,Headache,High,Joint pain,Medium,Fatigue,Low,,Dr. Smith,2024-03-17,10:15 AM,Rheumatology,Migraine
+48,18,Liam Davis,Male,55,Fatigue,High,Stomach ache,Medium,Dizziness,Low,,Dr. Johnson,2024-03-18,02:30 PM,Gastroenterology,Indigestion
+49,19,Olivia Taylor,Female,28,Shortness of breath,High,Fever,Medium,Cough,Low,,Dr. Davis,2024-03-19,11:45 AM,Pulmonology,Asthma
+50,20,Noah White,Male,32,Dizziness,High,Vertigo,Medium,Fatigue,Low,,Dr. Smith,2024-03-20,03:00 PM,Neurology,Vertigo
+51,11,Emily White,Female,28,Headache,High,Shortness of breath,Medium,Fatigue,Low,,Dr. Johnson,2024-04-01,02:45 PM,Pulmonology,Asthma
+52,12,Michael Davis,Male,45,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Davis,2024-04-02,11:00 AM,Rheumatology,Arthritis
+53,13,Abigail Wilson,Female,35,Fever,High,Cough,Medium,Shortness of breath,Low,,Dr. Smith,2024-04-03,03:15 PM,Internal Medicine,Pneumonia
+54,14,William Rodriguez,Male,50,Dizziness,High,Fatigue,Medium,Nausea,Low,,Dr. Johnson,2024-04-04,09:30 AM,Gastroenterology,Indigestion
+55,15,Emma Brown,Female,30,Cough,High,Headache,Medium,Shortness of breath,Low,,Dr. Davis,2024-04-05,01:45 PM,Internal Medicine,Flu
+56,16,Nathan Taylor,Male,42,Fever,High,Fatigue,Medium,Shortness of breath,Low,,Dr. Smith,2024-04-06,04:00 PM,Pulmonology,Pneumonia
+57,17,Ava Rodriguez,Female,25,Shortness of breath,High,Cough,Medium,Dizziness,Low,,Dr. Johnson,2024-04-07,10:15 AM,Internal Medicine,Asthma
+58,18,Liam Davis,Male,55,Dizziness,High,Fever,Medium,Joint pain,Low,,Dr. Davis,2024-04-08,02:30 PM,Rheumatology,Vertigo
+59,19,Olivia Taylor,Female,28,Fatigue,High,Stomach ache,Medium,Dizziness,Low,,Dr. Smith,2024-04-09,11:45 AM,Gastroenterology,Indigestion
+60,20,Noah White,Male,32,Headache,High,Vertigo,Medium,Fatigue,Low,,Dr. Johnson,2024-04-10,03:00 PM,Neurology,Vertigo
+61,21,Sophie Martin,Female,38,Fever,High,Cough,Medium,Shortness of breath,Low,,Dr. Davis,2024-04-11,02:00 PM,Pulmonology,Pneumonia
+62,22,James Thompson,Male,48,Joint pain,High,Dizziness,Medium,Headache,Low,,Dr. Smith,2024-04-12,10:30 AM,Rheumatology,Arthritis
+63,23,Isabella Hall,Female,31,Shortness of breath,High,Fever,Medium,Nausea,Low,,Dr. Johnson,2024-04-13,04:15 PM,Internal Medicine,Asthma
+64,24,Aiden Harris,Male,50,Cough,High,Fatigue,Medium,Headache,Low,,Dr. Davis,2024-04-14,11:45 AM,Neurology,Migraine
+65,25,Grace Turner,Female,27,Dizziness,High,Stomach ache,Medium,Fever,Low,Headache,Medium,Dr. Smith,2024-04-15,01:30 PM,Gastroenterology,Food poisoning
+66,26,Elijah Reed,Male,40,Headache,High,Cough,Medium,Shortness of breath,Low,,Dr. Johnson,2024-04-16,03:45 PM,Pulmonology,Flu
+67,27,Scarlett Wright,Female,22,Fever,High,Shortness of breath,Medium,Cough,Low,,Dr. Davis,2024-04-17,09:00 AM,Internal Medicine,Pneumonia
+68,28,Mason Allen,Male,60,Dizziness,High,Fatigue,Medium,Joint pain,Low,,Dr. Smith,2024-04-18,12:15 PM,Rheumatology,Vertigo
+69,29,Lily Parker,Female,25,Cough,High,Headache,Medium,Nausea,Low,,Dr. Johnson,2024-04-19,01:30 PM,Neurology,Migraine
+70,30,Owen Harris,Male,35,Fatigue,High,Stomach ache,Medium,Dizziness,Low,,Dr. Davis,2024-04-20,04:15 PM,Gastroenterology,Indigestion
+71,31,Emma Johnson,Female,5,Fever,High,Cough,Medium,Runny nose,Low,,Dr. Smith,2024-05-01,02:45 PM,Pediatrics,Common cold
+72,32,Noah Davis,Male,8,Cough,High,Fatigue,Medium,Sore throat,Low,,Dr. Johnson,2024-05-02,11:00 AM,Pediatrics,Strep throat
+73,33,Sophia Wilson,Female,6,Headache,High,Fever,Medium,Nausea,Low,,Dr. Davis,2024-05-03,03:15 PM,Pediatrics,Influenza
+74,34,Liam Brown,Male,4,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Smith,2024-05-04,09:30 AM,Pulmonology,Asthma (child)
+75,35,Olivia Taylor,Female,7,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Johnson,2024-05-05,01:45 PM,Rheumatology,Juvenile arthritis
+76,36,Noah White,Male,3,Fever,High,Runny nose,Medium,Cough,Low,,Dr. Davis,2024-05-06,04:00 PM,Pediatrics,Common cold
+77,37,Ava Rodriguez,Female,5,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Smith,2024-05-07,10:15 AM,Pulmonology,Asthma (child)
+78,38,Liam Davis,Male,6,Dizziness,High,Joint pain,Medium,Fatigue,Low,,Dr. Johnson,2024-05-08,02:30 PM,Rheumatology,Juvenile arthritis
+79,39,Olivia Taylor,Female,4,Headache,High,Fever,Medium,Nausea,Low,,Dr. Davis,2024-05-09,11:45 AM,Pediatrics,Influenza
+80,40,Noah White,Male,7,Fatigue,High,Stomach ache,Medium,Dizziness,Low,,Dr. Smith,2024-05-10,03:00 PM,Gastroenterology,Indigestion
+81,41,Isabella Thompson,Female,10,Fever,High,Cough,Medium,Runny nose,Low,,Dr. Smith,2024-06-01,02:45 PM,Pediatrics,Common cold
+82,42,Ethan Wilson,Male,38,Cough,High,Fatigue,Medium,Sore throat,Low,,Dr. Johnson,2024-06-02,11:00 AM,Internal Medicine,Strep throat
+83,43,Olivia Hall,Female,3,Headache,High,Fever,Medium,Nausea,Low,,Dr. Davis,2024-06-03,03:15 PM,Pediatrics,Influenza
+84,44,Liam Harris,Male,6,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Smith,2024-06-04,09:30 AM,Pulmonology,Asthma (child)
+85,45,Emma Turner,Female,28,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Johnson,2024-06-05,01:45 PM,Rheumatology,Arthritis
+86,46,Noah Reed,Male,4,Fever,High,Runny nose,Medium,Cough,Low,,Dr. Davis,2024-06-06,04:00 PM,Pediatrics,Common cold
+87,47,Ava Wright,Female,5,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Smith,2024-06-07,10:15 AM,Pulmonology,Asthma (child)
+88,48,Liam Martin,Male,32,Dizziness,High,Joint pain,Medium,Fatigue,Low,,Dr. Johnson,2024-06-08,02:30 PM,Rheumatology,Arthritis
+89,49,Isabella Parker,Female,8,Headache,High,Fever,Medium,Nausea,Low,,Dr. Davis,2024-06-09,11:45 AM,Pediatrics,Influenza
+90,50,Owen Harris,Male,35,Fatigue,High,Stomach ache,Medium,Dizziness,Low,,Dr. Smith,2024-06-10,03:00 PM,Gastroenterology,Indigestion
+91,51,Emily Davis,Female,12,Cough,High,Fatigue,Medium,Sore throat,Low,,Dr. Johnson,2024-07-01,02:45 PM,Pediatrics,Strep throat
+92,52,Michael Wilson,Male,42,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Davis,2024-07-02,11:00 AM,Rheumatology,Arthritis
+93,53,Abigail Turner,Female,9,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Smith,2024-07-03,03:15 PM,Pulmonology,Asthma (child)
+94,54,William Harris,Male,7,Fever,High,Runny nose,Medium,Cough,Low,,Dr. Johnson,2024-07-04,09:30 AM,Pediatrics,Common cold
+95,55,Emma Turner,Female,30,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Davis,2024-07-05,01:45 PM,Rheumatology,Arthritis
+96,56,Elijah Reed,Male,5,Headache,High,Fever,Medium,Nausea,Low,,Dr. Smith,2024-07-06,04:00 PM,Pediatrics,Influenza
+97,57,Scarlett Wright,Female,7,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Johnson,2024-07-07,10:15 AM,Pulmonology,Asthma (child)
+98,58,Mason Allen,Male,38,Dizziness,High,Joint pain,Medium,Fatigue,Low,,Dr. Davis,2024-07-08,02:30 PM,Rheumatology,Arthritis
+99,59,Lily Parker,Female,6,Headache,High,Fever,Medium,Nausea,Low,,Dr. Smith,2024-07-09,11:45 AM,Pediatrics,Influenza
+100,60,Owen Harris,Male,40,Fatigue,High,Stomach ache,Medium,Dizziness,Low,,Dr. Johnson,2024-07-10,03:00 PM,Gastroenterology,Indigestion
+101,61,Isaac Turner,Male,8,Cough,High,Fatigue,Medium,Sore throat,Low,,Dr. Davis,2024-08-01,02:45 PM,Pediatrics,Strep throat
+102,62,Ava Harris,Female,6,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Smith,2024-08-02,11:00 AM,Pulmonology,Asthma (child)
+103,63,Liam Davis,Male,35,Dizziness,High,Joint pain,Medium,Fatigue,Low,,Dr. Johnson,2024-08-03,03:15 PM,Rheumatology,Arthritis
+104,64,Olivia Parker,Female,10,Fever,High,Runny nose,Medium,Cough,Low,,Dr. Smith,2024-08-04,09:30 AM,Pediatrics,Common cold
+105,65,Emma Turner,Female,28,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Davis,2024-08-05,01:45 PM,Rheumatology,Arthritis
+106,66,Elijah Reed,Male,5,Headache,High,Fever,Medium,Nausea,Low,,Dr. Smith,2024-08-06,04:00 PM,Pediatrics,Influenza
+107,67,Scarlett Wright,Female,7,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Johnson,2024-08-07,10:15 AM,Pulmonology,Asthma (child)
+108,68,Mason Allen,Male,38,Dizziness,High,Joint pain,Medium,Fatigue,Low,,Dr. Davis,2024-08-08,02:30 PM,Rheumatology,Arthritis
+109,69,Lily Parker,Female,6,Headache,High,Fever,Medium,Nausea,Low,,Dr. Smith,2024-08-09,11:45 AM,Pediatrics,Influenza
+110,70,Owen Harris,Male,40,Fatigue,High,Stomach ache,Medium,Dizziness,Low,,Dr. Johnson,2024-08-10,03:00 PM,Gastroenterology,Indigestion
+111,71,Ella Thompson,Female,3,Fever,High,Cough,Medium,Runny nose,Low,,Dr. Smith,2024-09-01,02:45 PM,Pediatrics,Common cold
+112,72,Liam Harris,Male,45,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Davis,2024-09-02,11:00 AM,Rheumatology,Arthritis
+113,73,Ava Davis,Female,8,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Smith,2024-09-03,03:15 PM,Pulmonology,Asthma (child)
+114,74,Noah Smith,Male,6,Fever,High,Runny nose,Medium,Cough,Low,,Dr. Johnson,2024-09-04,09:30 AM,Pediatrics,Common cold
+115,75,Emma Turner,Female,28,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Davis,2024-09-05,01:45 PM,Rheumatology,Arthritis
+116,76,Elijah Reed,Male,5,Headache,High,Fever,Medium,Nausea,Low,,Dr. Smith,2024-09-06,04:00 PM,Pediatrics,Influenza
+117,77,Scarlett Wright,Female,7,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Johnson,2024-09-07,10:15 AM,Pulmonology,Asthma (child)
+118,78,Mason Allen,Male,38,Dizziness,High,Joint pain,Medium,Fatigue,Low,,Dr. Davis,2024-09-08,02:30 PM,Rheumatology,Arthritis
+119,79,Lily Parker,Female,6,Headache,High,Fever,Medium,Nausea,Low,,Dr. Smith,2024-09-09,11:45 AM,Pediatrics,Influenza
+120,80,Owen Harris,Male,40,Fatigue,High,Stomach ache,Medium,Dizziness,Low,,Dr. Johnson,2024-09-10,03:00 PM,Gastroenterology,Indigestion
+121,81,Sophia Hall,Female,5,Fever,High,Cough,Medium,Runny nose,Low,,Dr. Smith,2024-10-01,02:45 PM,Pediatrics,Common cold
+122,82,Aiden Davis,Male,33,Cough,High,Fatigue,Medium,Sore throat,Low,,Dr. Johnson,2024-10-02,11:00 AM,Internal Medicine,Strep throat
+123,83,Ella Turner,Female,4,Headache,High,Fever,Medium,Nausea,Low,,Dr. Davis,2024-10-03,03:15 PM,Pediatrics,Influenza
+124,84,Liam Harris,Male,7,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Smith,2024-10-04,09:30 AM,Pulmonology,Asthma (child)
+125,85,Emma Thompson,Female,29,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Johnson,2024-10-05,01:45 PM,Rheumatology,Arthritis
+126,86,Noah Turner,Male,5,Fever,High,Runny nose,Medium,Cough,Low,,Dr. Davis,2024-10-06,04:00 PM,Pediatrics,Common cold
+127,87,Ava Harris,Female,6,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Smith,2024-10-07,10:15 AM,Pulmonology,Asthma (child)
+128,88,Liam Davis,Male,34,Dizziness,High,Joint pain,Medium,Fatigue,Low,,Dr. Johnson,2024-10-08,02:30 PM,Rheumatology,Arthritis
+129,89,Isabella Parker,Female,9,Headache,High,Fever,Medium,Nausea,Low,,Dr. Davis,2024-10-09,11:45 AM,Pediatrics,Influenza
+130,90,Owen Harris,Male,36,Fatigue,High,Stomach ache,Medium,Dizziness,Low,,Dr. Smith,2024-10-10,03:00 PM,Gastroenterology,Indigestion
+131,91,Sophia Davis,Female,11,Cough,High,Fatigue,Medium,Sore throat,Low,,Dr. Johnson,2024-11-01,02:45 PM,Pediatrics,Strep throat
+132,92,Aiden Wilson,Male,40,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Davis,2024-11-02,11:00 AM,Rheumatology,Arthritis
+133,93,Olivia Turner,Female,7,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Smith,2024-11-03,03:15 PM,Pulmonology,Asthma (child)
+134,94,Noah Harris,Male,6,Fever,High,Runny nose,Medium,Cough,Low,,Dr. Johnson,2024-11-04,09:30 AM,Pediatrics,Common cold
+135,95,Emma Turner,Female,30,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Davis,2024-11-05,01:45 PM,Rheumatology,Arthritis
+136,96,Elijah Reed,Male,5,Headache,High,Fever,Medium,Nausea,Low,,Dr. Smith,2024-11-06,04:00 PM,Pediatrics,Influenza
+137,97,Scarlett Wright,Female,7,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Johnson,2024-11-07,10:15 AM,Pulmonology,Asthma (child)
+138,98,Mason Allen,Male,39,Dizziness,High,Joint pain,Medium,Fatigue,Low,,Dr. Davis,2024-11-08,02:30 PM,Rheumatology,Arthritis
+139,99,Lily Parker,Female,6,Headache,High,Fever,Medium,Nausea,Low,,Dr. Smith,2024-11-09,11:45 AM,Pediatrics,Influenza
+140,100,Owen Harris,Male,41,Fatigue,High,Stomach ache,Medium,Dizziness,Low,,Dr. Johnson,2024-11-10,03:00 PM,Gastroenterology,Indigestion
+141,101,Isaac Thompson,Male,8,Cough,High,Fatigue,Medium,Sore throat,Low,,Dr. Davis,2023-12-01,02:45 PM,Internal Medicine,Strep throat
+142,102,Ava Harris,Female,6,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Smith,2023-12-02,11:00 AM,Pulmonology,Asthma (child)
+143,103,Ella Turner,Female,4,Headache,High,Fever,Medium,Nausea,Low,,Dr. Johnson,2023-12-03,03:15 PM,Pediatrics,Influenza
+144,104,Liam Harris,Male,7,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Smith,2023-12-04,09:30 AM,Pulmonology,Asthma (child)
+145,105,Emma Thompson,Female,29,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Davis,2023-12-05,01:45 PM,Rheumatology,Arthritis
+146,106,Noah Turner,Male,5,Fever,High,Runny nose,Medium,Cough,Low,,Dr. Smith,2023-12-06,04:00 PM,Pediatrics,Common cold
+147,107,Ava Harris,Female,6,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Johnson,2023-12-07,10:15 AM,Pulmonology,Asthma (child)
+148,108,Liam Davis,Male,34,Dizziness,High,Joint pain,Medium,Fatigue,Low,,Dr. Davis,2023-12-08,02:30 PM,Rheumatology,Arthritis
+149,109,Isabella Parker,Female,9,Headache,High,Fever,Medium,Nausea,Low,,Dr. Smith,2023-12-09,11:45 AM,Pediatrics,Influenza
+150,110,Owen Harris,Male,36,Fatigue,High,Stomach ache,Medium,Dizziness,Low,,Dr. Johnson,2023-12-10,03:00 PM,Gastroenterology,Indigestion
+151,111,Sophia Davis,Female,11,Cough,High,Fatigue,Medium,Sore throat,Low,,Dr. Davis,2023-12-11,02:45 PM,Internal Medicine,Strep throat
+152,112,Aiden Wilson,Male,40,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Smith,2023-12-12,11:00 AM,Rheumatology,Arthritis
+153,113,Olivia Turner,Female,7,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Johnson,2023-12-13,03:15 PM,Pulmonology,Asthma (child)
+154,114,Noah Harris,Male,6,Fever,High,Runny nose,Medium,Cough,Low,,Dr. Davis,2023-12-14,09:30 AM,Pediatrics,Common cold
+155,115,Emma Turner,Female,30,Joint pain,High,Fatigue,Medium,Headache,Low,,Dr. Smith,2023-12-15,01:45 PM,Rheumatology,Arthritis
+156,116,Elijah Reed,Male,5,Headache,High,Fever,Medium,Nausea,Low,,Dr. Johnson,2023-12-16,04:00 PM,Pediatrics,Influenza
+157,117,Scarlett Wright,Female,7,Shortness of breath,High,Fatigue,Medium,Cough,Low,,Dr. Davis,2023-12-17,10:15 AM,Pulmonology,Asthma (child)
+158,118,Mason Allen,Male,39,Dizziness,High,Joint pain,Medium,Fatigue,Low,,Dr. Smith,2023-12-18,02:30 PM,Rheumatology,Arthritis
+159,119,Lily Parker,Female,6,Headache,High,Fever,Medium,Nausea,Low,,Dr. Johnson,2023-12-19,11:45 AM,Pediatrics,Influenza
+160,120,Owen Harris,Male,41,Fatigue,High,Stomach ache,Medium,Dizziness,Low,,Dr. Davis,2023-12-20,03:00 PM,Gastroenterology,Indigestion

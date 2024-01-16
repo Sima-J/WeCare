@@ -27,8 +27,11 @@
       </div>
     </div>
     <!-- Second Row with Form -->
+    {% if auth == False %}
+      <h1 style="color: red;text-align: center;">Wrong Username or Password</h1>
+    {% endif %}
     <div class="flex items-center justify-center mb-4">
-      <form class="px-8 py-10 w-3/4 shadow-md rounded-md bg-blue_100">
+      <form class="px-8 py-10 w-3/4 shadow-md rounded-md bg-blue_100" action="/submit_form" method="POST">
         <div class="flex items-center justify-cente mb-4">
           <label
             for="admin_username"

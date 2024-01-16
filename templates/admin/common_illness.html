@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Common Illness Analysis</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
+    <!-- ... (head section remains unchanged) -->
   </head>
   <body>
-    <div class="container mt-4">
-      <h1>Common Illness Analysis</h1>
+    <h1>Common Illness Report</h1>
 
-      <h2>Most Common Illness: {{ most_common_illness }}</h2>
+    <!-- Form for selecting date -->
+    <form method="post" action="{{ url_for('common_illness.admin_route') }}">
+      <label for="selected_date">Select Date:</label>
+      <input
+        type="text"
+        id="selected_date"
+        name="selected_date"
+        value="{% if selected_date is not none %}{{ selected_date.strftime('%Y-%m-%d') }}{% endif %}"
+        oninput="updateDateValue(this)"
+      />
+      <button type="submit">Filter</button>
+    </form>
 
-      <!-- Display symptoms and related illnesses -->
-      <h3>Symptoms and Related Illnesses:</h3>
-      <ul>
-        {% for index, row in symptoms_mapping.iterrows() %}
-        <li>
-          <strong>Symptoms:</strong> {{ row['Symptom1'] }}, {{ row['Symptom2']
-          }}, {{ row['Symptom3'] }}<br />
-          <strong>Illness:</strong> {{ row['Illness'] }}<br />
-          <strong>Count:</strong> {{ row['count'] }}
-        </li>
-        {% endfor %}
-      </ul>
+    <!-- Display most common illness information -->
+    {% if most_common_illness_info %}
+    <h2>Most Common Illness:</h2>
+    <p><strong>Illness:</strong> {{ most_common_illness_info.illness }}</p>
+    <p><strong>Symptoms:</strong> {{ most_common_illness_info.symptoms }}</p>
+    <p>
+      <strong>Visited Doctors:</strong> {{
+      most_common_illness_info.visited_doctors }}
+    </p>
+    {% else %}
+    <p>{{ most_common_illness_info }}</p>
+    {% endif %}
 
-      <!-- Display the dataset in an HTML table -->
-      <h3>Complete Dataset:</h3>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <!-- Add your table header columns here -->
-            <th>Patient Name</th>
-            <th>Gender</th>
-            <th>Symptom1</th>
-            <th>Level1</th>
-            <th>Symptom2</th>
-            <th>Level2</th>
-            <th>Symptom3</th>
-            <th>Level3</th>
-            <th>Illness</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{ table_html|safe }}
-        </tbody>
-      </table>
-    </div>
+    <!-- Display filtered dataset in a table -->
+    {% if table_html %}
+    <h2>Filtered Dataset:</h2>
+    {{ table_html | safe }} {% else %}
+    <p>No data available.</p>
+    {% endif %}
+
+    <!-- Debugging Information -->
+    <hr />
+    <h2>Debugging Information:</h2>
+    <p><strong>Selected Date (String):</strong> {{ selected_date_str }}</p>
+    <p><strong>Selected Date (Datetime):</strong> {{ selected_date }}</p>
+
+    <script>
+      function updateDateValue(input) {
+        // Extract YYYY-MM-DD format from the input
+        var dateValue = input.value;
+
+        // Set the input value with the correct format
+        input.value = dateValue;
+      }
+    </script>
   </body>
 </html>
