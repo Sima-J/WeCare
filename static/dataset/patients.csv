@@ -1,0 +1,11 @@
+PatientName,Gender,Symptom1,Level1,Symptom2,Level2,Symptom3,Level3,Illness
+John Doe,Male,Fever,High,Cough,Medium,Headache,Low,Flu
+Jane Smith,Female,Cough,High,Fatigue,Medium,Nausea,Low,Cold
+Bob Johnson,Male,Headache,High,Joint pain,Medium,Dizziness,Low,Migraine
+Alice Williams,Female,Shortness of breath,High,Fever,Medium,Rash,Low,Asthma
+Chris Brown,Male,Joint pain,High,Fatigue,Medium,Cough,Low,Arthritis
+Eva Davis,Female,Fatigue,High,Headache,Medium,Shortness of breath,Low,Anemia
+Mike Miller,Male,Nausea,High,Stomach ache,Medium,Headache,Low,Food poisoning
+Olivia Wilson,Female,Rash,High,Itching,Medium,Shortness of breath,Low,Allergy
+Daniel Taylor,Male,Stomach ache,High,Nausea,Medium,Fever,Low,Indigestion
+Sophia Rodriguez,Female,Dizziness,High,Vertigo,Medium,Fatigue,Low,Vertigo

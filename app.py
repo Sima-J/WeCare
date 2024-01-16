@@ -18,6 +18,7 @@ from controller.admin.doctor_register import admin_doctor_register_controller
 from controller.admin.login import admin_login_controller
 from controller.admin.patients_records import admin_patients_records_controller
 from controller.admin.register_patients import admin_register_patients_controller
+from controller.admin.common_illness import admin_common_illness_controller
 
 
 
@@ -45,7 +46,7 @@ app.register_blueprint(admin_doctor_register_controller)
 app.register_blueprint(admin_login_controller)
 app.register_blueprint(admin_patients_records_controller)
 app.register_blueprint(admin_register_patients_controller)
-
+app.register_blueprint(admin_common_illness_controller)
 
 
 
