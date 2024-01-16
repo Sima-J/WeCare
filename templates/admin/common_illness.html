@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Common Illness Analysis</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1>Common Illness Analysis</h1>
+
+      <h2>Most Common Illness: {{ most_common_illness }}</h2>
+
+      <!-- Display symptoms and related illnesses -->
+      <h3>Symptoms and Related Illnesses:</h3>
+      <ul>
+        {% for index, row in symptoms_mapping.iterrows() %}
+        <li>
+          <strong>Symptoms:</strong> {{ row['Symptom1'] }}, {{ row['Symptom2']
+          }}, {{ row['Symptom3'] }}<br />
+          <strong>Illness:</strong> {{ row['Illness'] }}<br />
+          <strong>Count:</strong> {{ row['count'] }}
+        </li>
+        {% endfor %}
+      </ul>
+
+      <!-- Display the dataset in an HTML table -->
+      <h3>Complete Dataset:</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <!-- Add your table header columns here -->
+            <th>Patient Name</th>
+            <th>Gender</th>
+            <th>Symptom1</th>
+            <th>Level1</th>
+            <th>Symptom2</th>
+            <th>Level2</th>
+            <th>Symptom3</th>
+            <th>Level3</th>
+            <th>Illness</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ table_html|safe }}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
