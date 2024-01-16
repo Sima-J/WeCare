@@ -13,6 +13,7 @@ module.exports = {
         green: "#66C057",
         black: "#282826",
         blue_100: "#F7FAFD",
+        cart_blue: "#d4ebf2"
 
         // Add more custom colors as needed
       },
