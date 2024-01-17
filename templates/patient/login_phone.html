@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/static/output.css" rel="stylesheet" />
 
-    <title>Patient Login with ID</title>
+    <title>Patient Login with Phone</title>
   </head>
   <body>
     <!-- First Row with Circle and Text -->
@@ -26,14 +26,19 @@
         </h1>
       </div>
     </div>
+
     <!-- Second Row with Form -->
     <div class="flex items-center justify-center mb-4">
-      <form class="px-8 py-10 w-3/4 shadow-md rounded-md bg-blue_100">
+      <form
+        class="px-8 py-10 w-3/4 shadow-md rounded-md bg-blue_100"
+        action="/submit_phone_form"
+        method="POST"
+      >
         <div class="flex items-center justify-center">
           <label
-            for="patient_id"
+            for="patient_phone"
             class="block text-xl font-semibold text-black w-1/3"
-            >Enter Your Phone Number:</label
+            >Enter Your Phone:</label
           >
           <input
             type="text"
@@ -42,6 +47,11 @@
             class="p-2 border rounded-md w-2/3"
           />
         </div>
+        {% if auth == False %}
+        <div class="flex justify-center mx-auto mt-4">
+          <h1 style="color: red; text-align: center">Wrong Phone Number</h1>
+        </div>
+        {% endif %}
         <div class="flex justify-center mt-6">
           <button
             type="submit"
