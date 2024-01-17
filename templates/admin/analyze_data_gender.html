@@ -4,55 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Common Illness Analysis</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link href="/static/output.css" rel="stylesheet" />
   </head>
-  <body>
-    <div class="container mt-4">
-      <h1>Common Illness Analysis</h1>
 
-      <h2>Most Common Illness: {{ most_common_illness }}</h2>
+  <body class="bg-gray-100">
+    <div class="container mx-auto mt-4 p-4">
+      <h1 class="text-3xl font-bold mb-4 text-blue-700">
+        Common Illness Analysis
+      </h1>
+
+      <h2 class="text-xl font-bold mb-2">
+        Most Common Illness: {{ most_common_illness }} Based on Gender
+      </h2>
 
       <!-- Display symptoms and related illnesses -->
-      <h3>Symptoms and Related Illnesses:</h3>
-      <ul>
-        {% for index, row in most_common_illness_by_gender.iterrows() %}
-        <li>
-          <strong>Gender:</strong> {{ row['Gender'] }}<br />
-          <strong>Illness:</strong> {{ row['Illness'] }}<br />
-          <strong>Count:</strong> {{ row['count'] }}
-        </li>
-        {% endfor %}
-      </ul>
-
-      <!-- Display the dataset in an HTML table -->
-      <h3>Complete Dataset:</h3>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>RecordID</th>
-            <th>PatientID</th>
-            <th>PatientName</th>
-            <th>Gender</th>
-            <th>Age</th>
-            <th>Symptom1</th>
-            <th>Level1</th>
-            <th>Symptom2</th>
-            <th>Level2</th>
-            <th>Symptom3</th>
-            <th>Level3</th>
-            <th>Symptom4</th>
-            <th>Level4</th>
-            <th>Doctor</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>SpecializedDoctor</th>
-            <th>Illness</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{ table_html|safe }}
-        </tbody>
-      </table>
+      <div class="border p-4 mb-4 bg-white rounded">
+        <h3 class="text-lg font-bold mb-2">Symptoms and Related Illnesses:</h3>
+        <ul class="list-disc ml-4">
+          {% for index, row in most_common_illness_by_gender.iterrows() %}
+          <li>
+            <span class="font-bold">Gender:</span> {{ row['Gender'] }}<br />
+            <span class="font-bold">Illness:</span> {{ row['Illness'] }}<br />
+            <span class="font-bold">Count:</span> {{ row['count'] }}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="text-center flex mt-4 w-full justify-center">
+        <a
+          class="font-bold border p-4 bg-primary rounded-md w-12 p-4 text-white"
+          href="/admin/analyze_data"
+        >
+          Analyzing The most common illness amongst the patients
+        </a>
+      </div>
     </div>
   </body>
 </html>
