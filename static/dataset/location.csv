@@ -1,0 +1,12 @@
+Street,Zone,Location,Population,Number_of_Cases,Pollution_Level,Healthcare_Availability,Economic_Index,Patient_Illness
+Elm Street,Zone A,City A,500000,1200,High,Moderate,66,Flu
+Oak Street,Zone B,City B,300000,800,Medium,High,22,Allergies
+Maple Street,Zone C,City C,700000,2500,Low,Low,33,COVID-19
+Pine Street,Zone D,City D,1000000,1500,Medium,High,44,Asthma
+Cedar Street,Zone E,City E,400000,600,High,Moderate,66,Diabetes
+Birch Street,Zone A,City A,500000,900,Medium,High,44,Migraine
+Willow Street,Zone B,City B,300000,600,Low,Low,55,Common Cold
+Redwood Street,Zone C,City C,700000,1800,High,Moderate,77,Pneumonia
+Sycamore Street,Zone D,City D,1000000,1200,Low,High,77,Hypertension
+Sequoia Street,Zone E,City E,400000,500,Medium,Moderate,77,Arthritis
+

@@ -23,16 +23,15 @@
         <ul class="list-disc ml-4">
           {% for index, row in most_common_illness_by_gender.iterrows() %}
           <li>
-            <span class="font-bold">Gender:</span> {{ row['Gender'] }}<br />
+            <span class="font-bold">- Gender:</span> {{ row['Gender'] }}<br />
             <span class="font-bold">Illness:</span> {{ row['Illness'] }}<br />
-            <span class="font-bold">Count:</span> {{ row['count'] }}
           </li>
           {% endfor %}
         </ul>
       </div>
       <div class="text-center flex mt-4 w-full justify-center">
         <a
-          class="font-bold border p-4 bg-primary rounded-md w-12 p-4 text-white"
+          class="font-bold border p-4 bg-primary rounded-md w-12 text-white"
           href="/admin/analyze_data"
         >
           Analyzing The most common illness amongst the patients

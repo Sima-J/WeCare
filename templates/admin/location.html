@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location Analysis</title>
+    <link href="/static/output.css" rel="stylesheet" />
+  </head>
+
+  <body class="">
+    <div class="container mx-auto mt-4 p-4 text-center">
+      <h1 class="text-2xl font-bold mb-4">Location Analysis</h1>
+
+      <!-- Display most common illness by location -->
+      <h2 class="text-xl font-bold mb-2">Most Common Illness by Location:</h2>
+      <div class="overflow-x-auto flex justify-center">
+        <table class="table-auto w-1/2 text-md">
+          <thead class="bg-primary text-white">
+            <tr>
+              <th class="border px-2 py-1">Location</th>
+              <th class="border px-2 py-1">Zone</th>
+              <th class="border px-2 py-1">Most Common Illness</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for (location, zone, illness) in
+            location_analysis['most_common_illness_by_location'].reset_index().itertuples(index=False)
+            %}
+            <tr>
+              <td class="border px-2 py-1">{{ location }}</td>
+              <td class="border px-2 py-1">{{ zone }}</td>
+              <td class="border px-2 py-1">{{ illness }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="text-center flex mt-8 pb-2 justify-center">
+        <a
+          class="font-bold border bg-primary rounded-md w-12 p-4 text-white"
+          href="/admin/analyze_data"
+        >
+          Analyzing The most common illness amongst the patients
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
