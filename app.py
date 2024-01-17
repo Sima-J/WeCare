@@ -21,13 +21,18 @@ from controller.admin.register_patients import admin_register_patients_controlle
 from controller.admin.common_illness import admin_common_illness_controller
 from controller.admin.analyze_data_gender import admin_analyze_gender_controller
 
-
-
+from controller.index import index_controller
 
 
 
 
 app = Flask(__name__, static_url_path='/static')
+
+
+app.register_blueprint(index_controller)
+
+
+
 # Patenit controllers
 app.register_blueprint(patient_login_controller)
 app.register_blueprint(patient_phone_controller)

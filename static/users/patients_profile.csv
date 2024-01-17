@@ -1,0 +1,6 @@
+patient_id,name,phone_number,email,blood_type,marital_status,location,city,country,long_term_illness,got_covid_before,birthdate
+1,John Doe,123-456-7890,john.doe@example.com,A+,Single,123 Main St,Cityville,USA,No,No,1990-05-15
+2,Jane Smith,987-654-3210,jane.smith@example.com,B-,Married,456 Oak St,Townsville,USA,Yes,Yes,1985-08-22
+3,Bob Johnson,555-123-4567,bob.johnson@example.com,O-,Single,789 Elm St,Villageton,Canada,Yes,No,1978-12-10
+4,Alice Brown,321-654-9870,alice.brown@example.com,AB+,Married,101 Pine St,Countryside,UK,Yes,Yes,1995-03-03
+5,Michael White,777-888-9999,michael.white@example.com,A-,Divorced,222 Cedar St,Hilltopville,USA,No,Yes,1982-06-28
