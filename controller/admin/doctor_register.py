@@ -22,7 +22,7 @@ def read_user_credentials():
 def admin_route():
     return render_template('/admin/doctor_register.html')
 
-@admin_doctor_register_controller.route('/submit_form', methods=['POST'])
+@admin_doctor_register_controller.route('/submit_register_form', methods=['POST'])
 def submit_form():
 
     authenticate = True

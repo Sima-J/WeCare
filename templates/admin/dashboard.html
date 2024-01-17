@@ -24,19 +24,8 @@
     </div>
 
     <div
-      class="grid w-full p-10 lg:grid-cols-3 md:grid-cols-2 lg:gap-20 gap-5 grid-cols-1 justify-between mt-14 items-center"
+      class="grid w-full p-10 lg:grid-cols-3 md:grid-cols-2 lg:gap-20 gap-5 grid-cols-1 justify-center mt-14 items-center"
     >
-      <div
-        class="p-5 cursor-pointer flex rounded-md justify-center items-center flex-col gap-3 bg-blue_300 hover:scale-110 transition-all relative"
-      >
-        <div class="">
-          <img src="/static/img/register.svg" alt="phone" class="w-32 h-32" />
-        </div>
-        <div class="w-full flex justify-center">
-          <p class="font-bold">Register</p>
-        </div>
-      </div>
-
       <div
         class="p-5 cursor-pointer flex rounded-md justify-center items-center flex-col gap-3 bg-blue_300 hover:scale-110 transition-all relative"
       >
@@ -44,7 +33,7 @@
           <img src="/static/img/analyze.svg" alt="phone" class="w-32 h-32" />
         </div>
         <div class="w-full flex justify-center">
-          <p class="font-bold">Analyze Patient Data</p>
+          <a href="/admin/analyze_data">Analyze Patient Data</a>
         </div>
       </div>
 
@@ -75,6 +64,18 @@
         </div>
         <div class="w-full flex justify-center">
           <p class="font-bold">Doctor Availability</p>
+        </div>
+      </div>
+      <div
+        class="p-5 cursor-pointer flex rounded-md justify-center items-center flex-row bg-blue-300 hover:scale-110 transition-all relative"
+      >
+        <div class="justify-center items-center">
+          <img src="/static/img/register.svg" alt="phone" class="w-32 h-32" />
+        </div>
+        <div class="w-full flex flex-col items-center">
+          <p class="font-bold">Register</p>
+          <a href="/admin/doctor_register">Doctor Register</a>
+          <a href="/admin/register_patient">Patients Register</a>
         </div>
       </div>
     </div>
