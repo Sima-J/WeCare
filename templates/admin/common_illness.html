@@ -1,58 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- ... (head section remains unchanged) -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/static/output.css" rel="stylesheet" />
+    <title>Common Illness</title>
   </head>
-  <body>
-    <h1>Common Illness Report</h1>
+  <body class="font-sans bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-4">
+      <h1 class="text-3xl font-bold mb-4">Common Illness Report</h1>
 
-    <!-- Form for selecting date -->
-    <form method="post" action="{{ url_for('common_illness.admin_route') }}">
-      <label for="selected_date">Select Date:</label>
-      <input
-        type="text"
-        id="selected_date"
-        name="selected_date"
-        value="{% if selected_date is not none %}{{ selected_date.strftime('%Y-%m-%d') }}{% endif %}"
-        oninput="updateDateValue(this)"
-      />
-      <button type="submit">Filter</button>
-    </form>
+      <!-- Form for selecting date -->
+      <form
+        class="mb-4"
+        method="post"
+        action="{{ url_for('common_illness.admin_route') }}"
+      >
+        <label for="selected_date" class="mr-2">Select Date:</label>
+        <input
+          type="text"
+          id="selected_date"
+          name="selected_date"
+          value="{% if selected_date is not none %}{{ selected_date.strftime('%Y-%m-%d') }}{% endif %}"
+          oninput="updateDateValue(this)"
+          class="border border-gray-300 p-2 rounded-md mr-2"
+        />
+        <button
+          type="submit"
+          class="bg-blue-500 text-white py-2 px-4 rounded-md"
+        >
+          Filter
+        </button>
+      </form>
 
-    <!-- Display most common illness information -->
-    {% if most_common_illness_info %}
-    <h2>Most Common Illness:</h2>
-    <p><strong>Illness:</strong> {{ most_common_illness_info.illness }}</p>
-    <p><strong>Symptoms:</strong> {{ most_common_illness_info.symptoms }}</p>
-    <p>
-      <strong>Visited Doctors:</strong> {{
-      most_common_illness_info.visited_doctors }}
-    </p>
-    {% else %}
-    <p>{{ most_common_illness_info }}</p>
-    {% endif %}
+      <!-- Display most common illness information -->
+      {% if most_common_illness_info %}
+      <h2 class="text-xl font-bold mb-2">Most Common Illness:</h2>
+      <p><strong>Illness:</strong> {{ most_common_illness_info.illness }}</p>
+      <p>
+        <strong>Symptoms:</strong> {% if most_common_illness_info.symptoms %}{{
+        most_common_illness_info.symptoms | join(', ') }}{% else %}-{% endif %}
+      </p>
+      <p>
+        <strong>Visited Doctors:</strong> {% if
+        most_common_illness_info.visited_doctors %}{{
+        most_common_illness_info.visited_doctors | join(', ') }}{% else %}-{%
+        endif %}
+      </p>
+      {% else %}
+      <p>{{ most_common_illness_info }}</p>
+      {% endif %}
+      <!-- Display filtered dataset in a table -->
+      {% if table_html %}
+      <h2 class="text-xl font-bold mb-2">Filtered Dataset:</h2>
+      <div class="overflow-x-auto">
+        <table
+          class="min-w-full bg-white border border-gray-300 rounded-md shadow-md text-sm"
+        >
+          <thead>
+            <tr>
+              <th class="border border-gray-300 py-2 px-4">Patient Name</th>
+              <th class="border border-gray-300 py-2 px-4">Gender</th>
+              <th class="border border-gray-300 py-2 px-4">Age</th>
+              <th class="border border-gray-300 py-2 px-4">Symptoms</th>
+              <th class="border border-gray-300 py-2 px-4">Doctor</th>
+              <th class="border border-gray-300 py-2 px-4">Date</th>
+              <th class="border border-gray-300 py-2 px-4">Illness</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for _, row in filtered_dataset.iterrows() %}
+            <tr>
+              <td class="border border-gray-300 py-2 px-4">
+                {{ row['PatientName'] | default('-') }}
+              </td>
+              <td class="border border-gray-300 py-2 px-4">
+                {{ row['Gender'] | default('-') }}
+              </td>
+              <td class="border border-gray-300 py-2 px-4">
+                {{ row['Age'] | default('-') }}
+              </td>
+              <td class="border border-gray-300 py-2 px-4">
+                {{ row['Symptom1'] | default('-') }}, {{ row['Symptom2'] |
+                default('-') }}, {{ row['Symptom3'] | default('-') }}, {{
+                row['Symptom4'] | default('-') }}
+              </td>
+              <td class="border border-gray-300 py-2 px-4">
+                {{ row['Doctor'] | default('-') }}
+              </td>
+              <td class="border border-gray-300 py-2 px-4">
+                {{ row['Date'] | default('-') }}
+              </td>
+              <td class="border border-gray-300 py-2 px-4">
+                {{ row['Illness'] | default('-') }}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% else %}
+      <p>No data available.</p>
+      {% endif %}
 
-    <!-- Display filtered dataset in a table -->
-    {% if table_html %}
-    <h2>Filtered Dataset:</h2>
-    {{ table_html | safe }} {% else %}
-    <p>No data available.</p>
-    {% endif %}
+      <script>
+        function updateDateValue(input) {
+          // Extract YYYY-MM-DD format from the input
+          var dateValue = input.value;
 
-    <!-- Debugging Information -->
-    <hr />
-    <h2>Debugging Information:</h2>
-    <p><strong>Selected Date (String):</strong> {{ selected_date_str }}</p>
-    <p><strong>Selected Date (Datetime):</strong> {{ selected_date }}</p>
-
-    <script>
-      function updateDateValue(input) {
-        // Extract YYYY-MM-DD format from the input
-        var dateValue = input.value;
-
-        // Set the input value with the correct format
-        input.value = dateValue;
-      }
-    </script>
+          // Set the input value with the correct format
+          input.value = dateValue;
+        }
+      </script>
+    </div>
   </body>
 </html>
